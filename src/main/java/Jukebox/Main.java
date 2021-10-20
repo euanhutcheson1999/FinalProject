@@ -11,6 +11,6 @@ public class Main {
         myPlaylist.addSong(track2);
         myPlaylist.addSong(track3);
         myPlaylist.removeSong(track1);
-        myPlaylist.getPlaylist(); //deeznutz
+        myPlaylist.getPlaylist();
     }
 }
