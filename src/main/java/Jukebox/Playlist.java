@@ -24,4 +24,13 @@ public class Playlist {
         this.songList.remove(song);
 
     }
+public String contains(Song song){
+        if (this.songList.contains(song)==true){
+            return "True";}
+    else {
+
+        return "False";
+        }
+    }
+
 }
