@@ -4,5 +4,4 @@ Feature: Create Playlist and Add Song
     Given I have a song to add to a playlist
     And I have a playlist
     When I enter the song into the playlist
-    Then Song should be added to playlist
-    And playlist is displayed
+    And Song should be added to playlist

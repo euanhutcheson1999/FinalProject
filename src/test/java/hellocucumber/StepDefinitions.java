@@ -31,28 +31,24 @@ public class StepDefinitions {
     }
 
     //Playlist Tests
+    Song song = new Song("In Too Deep", "Sum41", "Punk-Rock");
+    Playlist myPlaylist = new Playlist();
+
     @Given("I have a song to add to a playlist")
-    public Song iHaveASongToAddToAPlaylist() {
-        Song song = new Song("In Too Deep", "Sum41", "Punk-Rock");
-        return song;
+    public void iHaveASongToAddToAPlaylist() {
     }
 
     @And("I have a playlist")
-    public Playlist iHaveAPlaylist() {
-        Playlist myPlaylist = new Playlist();
-        return myPlaylist;
+    public void iHaveAPlaylist() {
     }
 
     @When("I enter the song into the playlist")
     public void iEnterTheSongIntoThePlaylist() {
-
+        myPlaylist.addSong(song);
     }
 
     @Then("Song should be added to playlist")
     public void songShouldBeAddedToPlaylist() {
-    }
-
-    @And("playlist is displayed")
-    public void playlistIsDisplayed() {
+        assertEquals("True", myPlaylist.contains(song), "Song is not in playlist");
     }
 }
