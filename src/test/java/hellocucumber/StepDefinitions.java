@@ -11,27 +11,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StepDefinitions {
     //Song Tests
+    Song song;
+
     @Given("I have a song to add")
     public void iHaveASongToAdd() {
     }
 
     @When("I enter the song details")
-    public String iEnterTheSongDetails() {
-        String SongTitle = "Thong Song";
-        String Artist = "Sisqo";
-        String Genre = "Hip-Hop";
-        Song song = new Song(SongTitle, Artist, Genre);
-        return song.getSongTitle();
+    public void iEnterTheSongDetails() {
+        song = new Song("Thong Song", "Sisgo", "Hip-Hop");
     }
 
     @Then("Song should be created")
     public void songShouldBeCreated() {
-        String ourSong = iEnterTheSongDetails();
-        assertEquals("Thong Song", ourSong, "Song was not correct");
+        assertEquals("Thong Song", song.getSongTitle(), "Song was not correct");
     }
 
     //Playlist Tests
-    Song song = new Song("In Too Deep", "Sum41", "Punk-Rock");
+
+    Song playlistSong = new Song("In Too Deep", "Sum41", "Punk-Rock");
     Playlist myPlaylist = new Playlist();
 
     @Given("I have a song to add to a playlist")
@@ -44,11 +42,11 @@ public class StepDefinitions {
 
     @When("I enter the song into the playlist")
     public void iEnterTheSongIntoThePlaylist() {
-        myPlaylist.addSong(song);
+        myPlaylist.addSong(playlistSong);
     }
 
     @Then("Song should be added to playlist")
     public void songShouldBeAddedToPlaylist() {
-        assertEquals("True", myPlaylist.contains(song), "Song is not in playlist");
+        assertEquals("True", myPlaylist.contains(playlistSong), "Song is not in playlist");
     }
 }
