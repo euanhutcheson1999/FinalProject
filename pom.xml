@@ -91,7 +91,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <sonar.organization>lwaugh1</sonar.organization>
+        <sonar.organization>euanhutcheson1999</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <!-- JaCoCo Properties -->
         <jacoco.version>0.8.6</jacoco.version>
