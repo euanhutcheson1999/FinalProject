@@ -1,7 +1,10 @@
 package Jukebox;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Playlist {
     private Song song;
@@ -22,5 +25,15 @@ public String contains(Song song){
         return "False";
         }
     }
+    public Optional<Song> selectSongsByTitle(String songTitle){
+        return this.songList.stream().filter(song -> song.getSongTitle().equals(songTitle)).findFirst();
+    }
+    public List<Song> collection(){
+        return this.songList;
+}
 
+    public String toString(){
+        String json = new Gson().toJson(songList);
+        return json;
+    }
 }
