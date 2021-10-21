@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 hellocucumber/StepDefinitions.class
 UnitTest/SongTest.class
 seleniumcucumbertest/MyStepdefs.class
 UnitTest/PlaylistTest.class
 runner/RunnerTest.class
+=======
+hellocucumber\StepDefinitions.class
+UnitTest\SongTest.class
+runner\RunnerTest.class
+UnitTest\PlaylistTest.class
+seleniumcucumbertest\MyStepdefs.class
+>>>>>>> 5e280d52da6e9cc454acc3ad50c1efe18086eeef
