@@ -1,4 +1,5 @@
 hellocucumber/StepDefinitions.class
-UnitTest/PlaylistTest.class
 UnitTest/SongTest.class
+seleniumcucumbertest/MyStepdefs.class
+UnitTest/PlaylistTest.class
 runner/RunnerTest.class

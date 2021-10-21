@@ -5,6 +5,6 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/featurec/", glue = "hellocucumber")
-public class RunnerTest {
+@CucumberOptions(features = "src/test/resources/features/", glue = "seleniumcucumbertest")
+public class RunnerTestselenium {
 }
