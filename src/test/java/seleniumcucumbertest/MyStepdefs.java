@@ -88,9 +88,18 @@ public class MyStepdefs {
     }
 
     @Then("the song is added")
-    public void theSongIsAdded() {
+    public void theSongIsAdded() throws InterruptedException {
         assertEquals(true,driver.findElement(By.xpath("//body[contains(text(),'DotA')]")).isDisplayed(), "Song is not displayed");
-
+        driver.get("https://www.youtube.com/watch?v=r13riaRKGo0");
+        Thread.sleep(300);
+        driver.manage().window().maximize();
 
     }
+
+
+
+
+
 }
+
+

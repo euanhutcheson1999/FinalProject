@@ -2,8 +2,8 @@ package UnitTest;
 
 import Jukebox.Song;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class SongTest {
     Song track1 = new Song("Somebody come get her", "Rae Sremmurd","Hip-Hop");
     Song track2 = new Song("All Star", "Smash Mouth", "Alternative Rock");
@@ -37,6 +37,15 @@ public class SongTest {
     public void testSetGenre(){
         track1.setGenre("Reggae");
         assertEquals("Reggae", track1.getGenre(), "The genre remained unchanged");
+    }
+
+    @Test
+    public void testToString(){
+        assertEquals("Song{" +
+                "SongTitle='" + track1.getSongTitle() + '\'' +
+                ", Artist='" + track1.getArtist() + '\'' +
+                ", Genre='" + track1.getGenre() + '\'' +
+                '}', track1.toString(),"This is not correct");
     }
 
 }

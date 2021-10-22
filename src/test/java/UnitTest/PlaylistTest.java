@@ -3,7 +3,7 @@ package UnitTest;
 import Jukebox.Playlist;
 import Jukebox.Song;
 import org.junit.jupiter.api.Test;
-
+import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -28,7 +28,21 @@ public class PlaylistTest {
     assertEquals("False",playlist.contains(track1),"This song is on the playlist");
 }
 
-
+@Test
+    public void containsTest(){
+    playlist.addSong(track1);
+    assertEquals("True", playlist.contains(track1), "This song is not contained in playlist");
+}
+@Test
+    public void selectSongsByTitleTest(){
+    playlist.addSong(track1);
+    assertEquals("Optional[Song{SongTitle='Somebody come get her', Artist='Rae Sremmurd', Genre='Hip-Hop'}]", playlist.selectSongsByTitle("Somebody come get her"),"The song was not selected");
+}
+@Test
+    public void toStringPlaylistTest(){
+    playlist.addSong(track1);
+    assertEquals("[{\"SongTitle\":\"Somebody come get her\",\"Artist\":\"Rae Sremmurd\",\"Genre\":\"Hip-Hop\"}]", playlist.toString(), "Did not return a json file");
+}
 
 
 }
